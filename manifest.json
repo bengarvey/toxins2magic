@@ -17,7 +17,7 @@
     {
       "matches": ["http://*/*", "https://*/*"],
       "js": ["jquery.js", "replaceToxins.js"],
-      "run_at": "document_end"
+      "run_at": "document_idle"
     }
   ]
 }
