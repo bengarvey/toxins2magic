@@ -1,8 +1,8 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 2,
 
   "name": "Toxins2Magic",
-  "description": "Replaces all mentions of the word \"toxin\" or \"toxins\" with \"Black Macic\"",
+  "description": "Replaces all mentions of the word \"toxin\" or \"toxins\" with \"Black Magic\"",
   "version": "1.0",
 
   "browser_action": {
@@ -12,5 +12,12 @@
   "permissions": [
     "activeTab",
     "https://ajax.googleapis.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["jquery.js", "replaceToxins.js"],
+      "run_at": "document_end"
+    }
   ]
 }
