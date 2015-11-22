@@ -2,8 +2,8 @@
   "manifest_version": 2,
 
   "name": "Toxins2Magic",
-  "description": "Replaces all mentions of the word \"toxin\" or \"toxins\" with \"Black Magic\"",
-  "version": "1.0",
+  "description": "Replaces all mentions of the word \"toxin\" or \"toxins\" with \"Black Magic\" on twitter",
+  "version": "1.1",
 
   "browser_action": {
     "default_icon": "icon.png",
@@ -15,7 +15,7 @@
   ],
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
+      "matches": ["https://*.twitter.com/*"],
       "js": ["jquery.js", "replaceToxins.js"],
       "run_at": "document_idle"
     }
